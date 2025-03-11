@@ -1,0 +1,83 @@
+.Root {
+  --slider-track-height: 30px;
+  --slider-thumb-size: 50px;
+
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: var(--slider-thumb-size);
+  align-items: center;
+
+  user-select: none;
+  touch-action: none;
+}
+
+.Track {
+  position: relative;
+  box-sizing: border-box;
+  height: var(--slider-track-height);
+  flex-grow: 1;
+
+  border: 1px solid var(--color-border-normal);
+  border-radius: var(--slider-track-height);
+  padding-inline-end: var(--size-small);
+
+  color: var(--color-text-light);
+  text-align: end;
+}
+
+.Range {
+  position: absolute;
+  height: 100%;
+
+  border-radius: var(--slider-track-height);
+
+  background-color: var(--color-brand-violet);
+}
+
+.Thumb {
+  display: flex;
+  box-sizing: border-box;
+  width: var(--slider-thumb-size);
+  height: var(--slider-thumb-size);
+
+  align-items: center;
+
+  border: 2px solid var(--color-background);
+  border-radius: var(--slider-thumb-size);
+
+  background-color: var(--color-brand-violet);
+  cursor: grab;
+
+  &:hover {
+    background-color: var(--color-brand-violet-hover);
+  }
+  &:active {
+    background-color: var(--color-brand-violet-active);
+  }
+  &:focus-visible {
+    outline: 3px solid var(--color-brand-violet-focus);
+  }
+
+  & > * {
+    position: absolute;
+    height: 100%;
+    white-space: nowrap;
+    pointer-events: none;
+    overflow: hidden;
+  }
+  &.textDirection-left > * {
+    right: calc((100% + var(--size-small)));
+    color: var(--color-text-inverted);
+  }
+  &.textDirection-right > * {
+    left: calc(100% + var(--size-small));
+    color: var(--color-text-normal);
+  }
+}
+
+.ValueWithUnit {
+  height: 100%;
+  display: inline-flex;
+  align-items: center;
+}
