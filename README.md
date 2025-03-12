@@ -1,5 +1,7 @@
 # Loan calculator
 
+Tested in Firefox and Edge.
+
 ## Prereqs & setup
 
 1. Install Node.js LTS 22 including NPM
@@ -11,9 +13,12 @@
    corepack enable pnpm # run as admin/root
    ```
 
-3. Run `pnpm install`
+3. Run `pnpm install` to install all NPM deps
 
-## Chosen tools & libraries
+4. Run `pnpm start` to run the app with the build-in dev server or
+   `pnpm build && pnpm start:preview` to run the app in production mode.
+
+## Used tools & libraries
 
 1. Bundling: Vite + ESLint
 
