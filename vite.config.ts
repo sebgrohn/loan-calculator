@@ -6,4 +6,8 @@ import react from "@vitejs/plugin-react-swc";
 export default defineConfig({
   plugins: [react()],
   test: {},
+  build: {
+    outDir: "docs", // For compatibility with GitHub Pages
+  },
+  base: "./", // For compatibility with GitHub Pages
 });
