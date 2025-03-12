@@ -1,0 +1,50 @@
+{
+  "name": "sebgrohn-lanekalkyl",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "start": "vite",
+    "start:preview": "vite preview",
+    "build": "tsc -b && vite build",
+    "fix": "pnpm fix:format && pnpm fix:lint",
+    "fix:format": "prettier . --write",
+    "fix:lint": "eslint . --fix",
+    "test": "pnpm test:code && pnpm test:format && pnpm test:lint && pnpm test:types",
+    "test:code": "vitest run",
+    "test:format": "prettier . --check",
+    "test:lint": "eslint .",
+    "test:types": "tsc --noEmit",
+    "watch:test": "vitest",
+    "watch:types": "tsc --noEmit --watch"
+  },
+  "dependencies": {
+    "@radix-ui/react-label": "^2.1.2",
+    "@radix-ui/react-slider": "^1.2.3",
+    "@radix-ui/react-visually-hidden": "^1.1.2",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.21.0",
+    "@types/react": "^19.0.10",
+    "@types/react-dom": "^19.0.4",
+    "@vitejs/plugin-react-swc": "^3.8.0",
+    "eslint": "^9.21.0",
+    "eslint-plugin-react-hooks": "^5.1.0",
+    "eslint-plugin-react-refresh": "^0.4.19",
+    "globals": "^15.15.0",
+    "prettier": "^3.5.3",
+    "typescript": "~5.7.2",
+    "typescript-eslint": "^8.24.1",
+    "vite": "^6.2.0",
+    "vitest": "^3.0.8"
+  },
+  "packageManager": "pnpm@10.5.2+sha512.da9dc28cd3ff40d0592188235ab25d3202add8a207afbedc682220e4a0029ffbff4562102b9e6e46b4e3f9e8bd53e6d05de48544b0c57d4b0179e22c76d1199b",
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "@swc/core",
+      "esbuild"
+    ]
+  }
+}

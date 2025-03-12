@@ -1,0 +1,27 @@
+.Button {
+  all: unset;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--border-radius);
+  padding-inline: var(--size-medium);
+  padding-block: var(--size-small);
+
+  background-color: var(--color-brand-green);
+  color: var(--color-text-inverted);
+  font-weight: var(--font-weight-strong);
+  cursor: default;
+  user-select: none;
+
+  &:hover {
+    background-color: var(--color-brand-green-hover);
+  }
+  &:active {
+    background-color: var(--color-brand-green-active);
+    color: var(--color-text-inverted-transparent);
+  }
+  &:focus-visible {
+    outline: 2px solid var(--color-brand-green-focus);
+    outline-offset: 2px;
+  }
+}

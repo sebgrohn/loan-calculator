@@ -1,0 +1,63 @@
+:root {
+  --size-small: 8px;
+  --size-medium: 16px;
+  --size-large: 25px;
+
+  --border-radius: 4px;
+
+  --color-background: hsl(0, 0%, 100%); /* #ffffff */
+  --color-text-normal: hsl(0, 0%, 13.33%); /* #222222 */
+  --color-text-muted: hsl(0, 0%, 40%); /* #666666 */
+  --color-text-light: hsl(0, 0%, 60.39%); /* #9a9a9a */
+  --color-text-inverted: hsl(0, 0%, 100%); /* #ffffff */
+  --color-text-inverted-transparent: hsl(
+    0,
+    0%,
+    100%,
+    0.9
+  ); /* rgba(255, 255, 255, 0.5) */
+  --color-border-normal: hsl(0, 0%, 60%); /* #999999 */
+
+  --color-brand-violet: hsl(267.95, 48.35%, 35.69%); /* #582f87 */
+  --color-brand-violet-hover: hsl(267.95, 48.35%, 28%);
+  --color-brand-violet-active: hsl(267.95, 48.35%, 23%);
+  --color-brand-violet-focus: hsl(267.95, 48.35%, 20%);
+
+  --color-brand-green: hsl(157.06, 73.91%, 45.1%); /* #1ec887 */
+  --color-brand-green-hover: hsl(157.06, 73.91%, 40%);
+  --color-brand-green-active: hsl(157.06, 73.91%, 35%);
+  --color-brand-green-focus: hsl(157.06, 73.91%, 20%);
+
+  --font-weight-strong: 700;
+  --font-weight-normal: 600;
+
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: calc(18 / 14); /* 18px */
+  font-weight: var(--font-weight-normal);
+
+  color-scheme: light dark;
+  color: var(--color-text-normal);
+  background-color: var(--color-background);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  min-width: 200px;
+  width: 600px;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
